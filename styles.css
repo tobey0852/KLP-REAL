@@ -1,0 +1,311 @@
+
+*, *::after, *::before{
+
+  box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: 'PT Sans Narrow', sans-serif!important;
+    padding-top: 52px;
+  }
+  
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    
+    margin-bottom: 9px;
+  }
+  
+  .navbar a {
+    
+    
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover, .navbar a:active {
+    border-bottom: 2px solid white;
+
+    
+  }
+  
+  .logo {
+    color: white;
+    font-size: 25px;
+    margin-left: 5rem;
+  }
+
+ /* carosel */
+.carousel-section{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+ 
+}
+
+.carousel {
+  height: 30rem;
+  position: relative;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 10rem;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.carousel-section a {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.dot {
+ 
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+
+/* about */
+
+.about-div{
+  
+  font-family: 'Montserrat', sans-serif !important;
+  margin-left: 4rem !important;
+  margin-right: 4rem !important;
+  color: white !important;
+  padding-top: 4rem;
+}
+
+.description-div{
+  margin-top: 50px;
+  background-color: #240620;
+  color: white !important;
+  height: 35rem;
+  padding-bottom: 30px;
+}
+
+
+.center-container {
+  text-align: center;
+}
+.custom-button {
+  padding: 7px 10px;
+  background-color: white;
+  color: rgb(29, 4, 4);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* <!-- AREAS OF PRACTICE --> */
+.area-practice{
+  margin-bottom: 5rem;
+}
+.custom-box {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-box:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.5);
+}
+
+.custom-box img {
+  max-width: 100%;
+}
+
+.custom-box h4 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.resized-image{
+      width: 60px; 
+    height: auto; 
+}
+
+.box-file{
+  height: 15rem;
+  margin-top: 5rem;
+}
+
+
+/* NEED A LAWYER SECTION */
+.parent-div {
+  background-color: #0c2444;
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Custom CSS to center the child divs */
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  color: white; /* Make the parent div full viewport height */
+}
+
+button{
+  background-color: #ac742c;
+  color: white;
+}
+
+/* footer */
+
+.footer-div{
+  margin-top: 5rem;
+}
+
+
+/* 
+About-us page */
+.about-div-one{
+  height: 20rem;
+  width: 100%;
+  background-color: #0f4279;
+  margin-left: 0 !important;
+  margin-top: 10rem !important;
+  background-image: url(images/istockphoto-1449334081-612x612.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.about-div-h2{
+/* margin: auto; */
+text-align: center;
+margin-top: 80px;
+
+}
+.about-us-feeds{
+  margin: auto;
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10rem;
+}
+
+
+/* responsive media queries  */
+
+@media screen and (max-width: 934px){
+  .description-div{
+    
+    height: 50rem;
+  }
+}
+
+@media screen and (max-width: 672px){
+  .description-div{
+    
+    height: 65rem;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .description-div{
+    
+    height: 90rem;
+  }
+}
+
+.p-para {
+  font-size: 15px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+h1, h2 {
+  font-size: 14px;
+}
+
+.h4-para{
+  text-align: justify;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.areas-of-practice{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.form-group{
+  margin-bottom: 8px;
+}
