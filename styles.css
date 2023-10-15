@@ -309,3 +309,18 @@ h1, h2 {
 .form-group{
   margin-bottom: 8px;
 }
+
+
+/* career page div */
+
+.career-div{
+  height: 20rem;
+  width: 100%;
+  background-color: #0f4279;
+  margin-left: 0 !important;
+  margin-top: 10rem !important;
+  background-image: url(images/istockphoto-1449334081-612x612.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
