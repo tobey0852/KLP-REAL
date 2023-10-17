@@ -8,6 +8,8 @@ body {
     margin:0;
     font-family: 'PT Sans Narrow', sans-serif!important;
     padding-top: 52px;
+    font-size: 60px;
+    line-height: 2px;
   }
   
   .navbar {
@@ -168,6 +170,13 @@ p {
 
 .custom-button:hover {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+.form-space-control-2{
+  padding-bottom: 20px;
+  
+}
+.form-space-control{
+  margin-left: 40px;
 }
 
 
@@ -450,8 +459,9 @@ h1, h2 {
 
 /* Second Child Div */
 .content-container {
-  border-left: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
   padding: 20px;
+  margin-left: 50px;
 }
 
 .content-container h1 {
