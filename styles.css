@@ -335,6 +335,8 @@ h1, h2 {
   background-image: url(images/istockphoto-1449334081-612x612.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 3rem;
+  
   
 }
 
@@ -342,7 +344,12 @@ h1, h2 {
   text-align: center;
   color: white;
   font-size: 60px;
+ 
 }
+.about-us-para1{
+  text-align: justify;
+}
+
 
 .career-h1-span{
   font-size: 20px;
