@@ -1,8 +1,8 @@
 
-*, *::after, *::before{
+/* *, *::after, *::before{
 
   box-sizing: border-box;
-}
+} */
 
 body {
     margin:0;
@@ -10,6 +10,7 @@ body {
     padding-top: 52px;
     font-size: 60px;
     line-height: 2px;
+    margin-bottom: 0;
   }
   
   .navbar {
@@ -508,3 +509,34 @@ padding-bottom: 5rem;
 iframe {
   width: 100%;
 }
+
+
+
+@media screen and (max-width: 934px){
+  .parent-div1{
+    display: flex;
+  }
+}
+
+
+
+/* TEAM DIV CSS */
+.image-container {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.image-container img {
+  width: 50%;
+  transition: width 0.5s ease-in-out; /* You can adjust the transition properties as needed */
+}
+
+.image-container img:hover {
+  width: 65%; /* Adjust the final width on hover as needed */
+}
+
+
+
+
+
+

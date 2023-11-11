@@ -13,13 +13,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>KLP</title>
     <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script type="text/javascript">
-(function(){
-  emailjs.init("w33G2gnyrmvIr27rZ");
-})();
+   (function(){
+      emailjs.init("w33G2gnyrmvIr27rZ");
+   })();
 </script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form')
+            .addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_mxda4jh', 'template_x6eb2df', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>  
 
 </head>
 <body>
@@ -32,10 +49,10 @@
   </div>
 
   <div>
-<a href="#">Home</a>
+<a href="index.html">Home</a>
   <a href="about.html">About Us</a>
   <a href="area-of-practice.html">Practice Areas</a>
-  <a href="#">Our Team</a>
+  <a href="team.html">Our Team</a>
   <!-- <a href="#">Insights</a> -->
   <a href="career.html">Careers</a>
   <a href="contact.html">Contact Us</a>
@@ -44,39 +61,38 @@
 
 <!-- carousel  div -->
 <section class="carousel-section">
-<div class="carousel-container">
-  <div class="carousel">
-      <div class="carousel-slide" style="background-image: url('images/club-2492011_1280.jpg');">
-          <div class="carousel-content">
-              <h2>Full-service law firm with international reach</h2>
-              <p>We pride ourselves in providing strategic and pragmatic legal guidance,
-                 which is client-focused by bridging legal need and legal solution.</p>
-              <a href="#">Read More</a>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-slide" style="background-image: url('images/club-2492011_1280.jpg');">
+          <div class="carousel-content" style="text-align: center;">
+            <h2>Full-service law firm with international reach</h2>
+            <p>We pride ourselves in providing strategic and pragmatic legal guidance, which is client-focused by bridging legal need and legal solution.</p>
+            <a href="#">Read More</a>
           </div>
-      </div>
-      <div class="carousel-slide" style="background-image: url('images/legal-1143114_1280.jpg');">
-          <div class="carousel-content">
-              <h2>At KLP, you get the best for your legal needs</h2>
-              <p>We are a full-service law firm with a vast history of professional experience and expertise coupled with an enviable track record for service delivery and client satisfaction in diverse areas of law</p>
-              <a href="#">Read More</a>
+        </div>
+        <div class="carousel-slide" style="background-image: url('images/legal-1143114_1280.jpg');">
+          <div class="carousel-content" style="text-align: center;">
+            <h2>At KLP, you get the best for your legal needs</h2>
+            <p>We are a full-service law firm with a vast history of professional experience and expertise coupled with an enviable track record for service delivery and client satisfaction in diverse areas of law</p>
+            <a href="#">Read More</a>
           </div>
-      </div>
-      <div class="carousel-slide" style="background-image: url('images/tree-1959267_1280.jpg');">
-          <div class="carousel-content">
-              <h2>With excellence as our watch word, our firm brings in top-notch legal talents and industry knowledge to help clients achieve their desired results</h2>
-              <p>We are a full-service law firm with a depth of proven experience and expertise in diverse areas of the law </p>
-              <a href="#">Read More</a>
+        </div>
+        <div class="carousel-slide" style="background-image: url('images/tree-1959267_1280.jpg');">
+          <div class="carousel-content" style="text-align: center;">
+            <h2>With excellence as our watch word, our firm brings in top-notch legal talents and industry knowledge to help clients achieve their desired results</h2>
+            <p>We are a full-service law firm with a depth of proven experience and expertise in diverse areas of the law </p>
+            <a href="#">Read More</a>
           </div>
+        </div>
       </div>
-  </div>
-  <div class="carousel-dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-  </div>
-</div>
+      <div class="carousel-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
   
-</section>
 
 <!-- End of carousel div -->
 
@@ -95,7 +111,13 @@
             We are highly appreciated by our clients for being meticulous in our service delivery which is tailored to suit each client's peculiar needs.
             </p>
             <div class="center-container">
-              <button class="custom-button"> <a href="about.html"> MORE ABOUT US </a></button>
+                <div class="center-container">
+                    <button class="btn btn-primary" style="color: white; text-decoration: none;">
+                      <a href="about.html" style="color: white; text-decoration: none;">MORE ABOUT US</a>
+                    </button>
+                  </div>
+                  
+                  
           </div>
       </div>
 
@@ -119,7 +141,7 @@
                   <label for="message">Message:</label>
                   <textarea class="form-control form-space-control-2" name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary button-gap" >Submit</button>
+              <button type="submit" class="btn btn-primary button-gap text-center">Submit</button>
           </form>
         </div>
       </div>
@@ -140,72 +162,72 @@
   <div class="row ">
       <div class="col-md-2">
           <div class="custom-box box-file">
-              <img class="resized-image" src="images/map.jpeg" alt="Image 1">
+              <img class="resized-image" src="images/img2.jpg" alt="Image 1">
               <h4>Corporate and Commercial Law</h4>
           </div>
       </div>
       <div class="col-md-2">
           <div class="custom-box box-file">
-              <img class="resized-image" src="images/map.jpeg" alt="Image 2">
+              <img class="resized-image" src="images/img3.jpg" alt="Image 2">
               <h4>Compliance and Enquiries</h4>
           </div>
       </div>
       <div class="col-md-2">
           <div class="custom-box box-file">
-              <img class="resized-image" src="images/map.jpeg" alt="Image 3">
+              <img class="resized-image" src="images/img4.jpg" alt="Image 3">
               <h4>Real Estate & Property law practice.</h4>
           </div>
       </div>
       <div class="col-md-2">
           <div class="custom-box box-file">
-              <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+              <img class="resized-image" src="images/img5.jpg" alt="Image 4">
               <h4>Taxation</h4>
           </div>
       </div>
       <div class="col-md-2">
         <div class="custom-box box-file">
-            <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+            <img class="resized-image" src="images/img6.jpg" alt="Image 4">
             <h4>Dispute Resolution, Litigation and Arbitration</h4>
         </div>
     </div>
     
     <div class="col-md-2">
       <div class="custom-box box-file">
-          <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+          <img class="resized-image" src="images/img7.jpg" alt="Image 4">
           <h4>Banking and Finance</h4>
       </div>
   </div><div class="col-md-2">
     <div class="custom-box box-file">
-        <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+        <img class="resized-image" src="images/img8.jpg" alt="Image 4">
         <h4>Services & Entertainment</h4>
     </div>
 </div>
 
 <div class="col-md-2">
   <div class="custom-box box-file">
-      <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+      <img class="resized-image" src="images/img9.jpg" alt="Image 4">
       <h4>Compliance and consulting</h4>
   </div>
 </div>
 
 <div class="col-md-2">
   <div class="custom-box box-file">
-      <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+      <img class="resized-image" src="images/img2.jpg" alt="Image 4">
       <h4>Energy and environment</h4>
   </div>
 </div><div class="col-md-2 ">
   <div class="custom-box box-file">
-      <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+      <img class="resized-image" src="images/img5.jpg" alt="Image 4">
       <h4>Company Secretarial</h4>
   </div>
 </div><div class="col-md-2">
   <div class="custom-box box-file">
-      <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+      <img class="resized-image" src="images/img7.jpg" alt="Image 4">
       <h4>Corporate due diligence</h4>
   </div>
 </div><div class="col-md-2">
   <div class="custom-box box-file">
-      <img class="resized-image" src="images/map.jpeg" alt="Image 4">
+      <img class="resized-image" src="images/img7.jpg" alt="Image 4">
       <h4>Oil and Gas</h4>
   </div>
 
@@ -229,7 +251,7 @@
                 <!-- Child 2 -->
                 <div>
                     <button>
-                        <a href="contact.html">
+                        <a href="contact.html" style="text-decoration: none;">
                     SPEAK TO A LAWYER </a>
                     </button>
                 </div>
@@ -241,7 +263,7 @@
 
 
 <section>
-    <footer class="footer footer-div">
+    <footer class="footer footer-div" style="margin-bottom: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 text-justify">
@@ -288,7 +310,7 @@
     </footer>
 
     <!-- Copyright Div -->
-    <div class="container text-center mt-4">
+    <div class="text-center">
         <p>&copy; 2023 KLP. All rights reserved.</p>
     </div>
 </section>
@@ -311,6 +333,8 @@
 <script src="klp.js">
     
 </script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
